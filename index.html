@@ -96,5 +96,12 @@
     <p>&copy; 2026 Peisong Yuan. Built with HTML, CSS, and D3 for my class.</p>
   </footer>
 
+  <!-- smooth scrolling can cancel the jump to #contact when coming from another page, so do it here -->
+  <script>
+    window.addEventListener("load", () => {
+      if (location.hash) document.querySelector(location.hash)?.scrollIntoView({ behavior: "instant" });
+    });
+  </script>
+
 </body>
 </html>
