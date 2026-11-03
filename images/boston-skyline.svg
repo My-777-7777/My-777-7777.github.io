@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="title">
+  <title id="title">Illustration of the Boston skyline over the Charles River</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9e4f0"/>
+      <stop offset="1" stop-color="#f6e3e0"/>
+    </linearGradient>
+    <pattern id="win" width="14" height="20" patternUnits="userSpaceOnUse">
+      <rect x="4" y="5" width="6" height="9" fill="#f4d58d" opacity="0.85"/>
+    </pattern>
+  </defs>
+
+  <!-- sky and sun -->
+  <rect width="600" height="420" fill="url(#sky)"/>
+  <circle cx="455" cy="190" r="46" fill="#f2b3a8"/>
+
+  <!-- birds -->
+  <g fill="none" stroke="#1b2a41" stroke-width="2" stroke-linecap="round">
+    <path d="M90 90 q8 -8 16 0 q8 -8 16 0"/>
+    <path d="M130 120 q6 -6 12 0 q6 -6 12 0"/>
+  </g>
+
+  <!-- back row of buildings -->
+  <g fill="#8ea3bd">
+    <rect x="30" y="228" width="50" height="92"/>
+    <rect x="95" y="200" width="40" height="120"/>
+    <rect x="340" y="212" width="48" height="108"/>
+    <rect x="498" y="238" width="62" height="82"/>
+  </g>
+
+  <!-- front row of buildings -->
+  <g fill="#1b2a41">
+    <rect x="0" y="265" width="40" height="55"/>
+    <rect x="60" y="250" width="55" height="70"/>
+    <rect x="130" y="180" width="38" height="140"/>
+    <rect x="185" y="110" width="44" height="210"/>
+    <rect x="203" y="80" width="8" height="30"/>
+    <polygon points="250,320 250,135 300,150 300,320"/>
+    <rect x="315" y="235" width="50" height="85"/>
+    <rect x="380" y="260" width="45" height="60"/>
+    <rect x="440" y="275" width="35" height="45"/>
+    <polygon points="440,276 457.5,262 475,276"/>
+    <rect x="482" y="280" width="35" height="40"/>
+    <rect x="525" y="268" width="75" height="52"/>
+  </g>
+
+  <!-- lit windows -->
+  <rect x="63" y="258" width="50" height="58" fill="url(#win)"/>
+  <rect x="132" y="188" width="34" height="126" fill="url(#win)"/>
+  <rect x="188" y="120" width="38" height="196" fill="url(#win)"/>
+  <rect x="318" y="244" width="44" height="72" fill="url(#win)"/>
+  <rect x="528" y="276" width="70" height="40" fill="url(#win)"/>
+
+  <!-- glass tower stripes -->
+  <g stroke="#3a5274" stroke-width="2">
+    <line x1="262" y1="139" x2="262" y2="320"/>
+    <line x1="275" y1="143" x2="275" y2="320"/>
+    <line x1="288" y1="147" x2="288" y2="320"/>
+  </g>
+
+  <!-- trees along the river bank -->
+  <g fill="#2e7d5b">
+    <circle cx="10" cy="318" r="9"/><circle cx="38" cy="320" r="8"/>
+    <circle cx="70" cy="318" r="9"/><circle cx="102" cy="320" r="8"/>
+    <circle cx="140" cy="318" r="9"/><circle cx="175" cy="320" r="8"/>
+    <circle cx="240" cy="319" r="9"/><circle cx="310" cy="320" r="8"/>
+    <circle cx="345" cy="318" r="9"/><circle cx="395" cy="320" r="8"/>
+    <circle cx="430" cy="318" r="9"/><circle cx="500" cy="320" r="8"/>
+    <circle cx="540" cy="318" r="9"/><circle cx="585" cy="320" r="9"/>
+  </g>
+
+  <!-- Charles River -->
+  <rect x="0" y="324" width="600" height="96" fill="#5f7fa3"/>
+  <g stroke="#a9bfd6" stroke-width="3" stroke-linecap="round">
+    <line x1="40" y1="345" x2="90" y2="345"/>
+    <line x1="200" y1="352" x2="260" y2="352"/>
+    <line x1="300" y1="390" x2="350" y2="390"/>
+    <line x1="60" y1="398" x2="100" y2="398"/>
+    <line x1="520" y1="400" x2="570" y2="400"/>
+  </g>
+  <g stroke="#f2b3a8" stroke-width="4" stroke-linecap="round">
+    <line x1="425" y1="340" x2="485" y2="340"/>
+    <line x1="435" y1="355" x2="475" y2="355"/>
+    <line x1="445" y1="370" x2="465" y2="370"/>
+  </g>
+
+  <!-- sailboat -->
+  <line x1="146" y1="316" x2="146" y2="365" stroke="#ffffff" stroke-width="2"/>
+  <polygon points="148,318 148,360 176,360" fill="#ffffff"/>
+  <polygon points="144,326 144,360 124,360" fill="#c8102e"/>
+  <polygon points="118,364 180,364 170,376 128,376" fill="#ffffff"/>
+</svg>

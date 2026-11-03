@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peisong Yuan | Experience</title>
+  <meta name="description" content="Peisong Yuan's experience in finance, investment, engineering project management, and sustainability.">
+
+  <!-- Google Fonts: Archivo for headings, Source Serif 4 for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation bar (same on every page) -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Peisong Yuan</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="page-intro">
+      <h1 class="page-title">My Experience</h1>
+      <p>Here's a closer look at what I've been doing outside of class. Most of my experience falls into three areas: finance and investment, engineering project management, and sustainability. They might look like very different worlds, but they connect more than you'd expect. Every big building project is also a big financial decision, and both sides depend on good data.</p>
+    </section>
+
+    <figure class="wide-figure">
+      <img src="images/construction-finance.svg" alt="Illustration of a building under construction with a crane, next to a rising bar chart">
+      <figcaption>The two worlds I work in: building projects and the numbers behind them.</figcaption>
+    </figure>
+
+    <section class="exp-block">
+      <div class="exp-heading">
+        <h2>Finance &amp; Investment</h2>
+        <p class="years">2024 to 2026, four internships</p>
+      </div>
+      <div class="exp-text">
+        <p>My first internship was at Hongzheng Lide Capital in the summer of 2024, where I tracked funds across 28 sectors and ranked them by excess return. I used Wind a lot there to pull data on growth trends and valuations. In 2025 I joined CICC Wealth Management and analyzed more than ten wealth management products, including China A50, CTA, market-neutral, and snowball products. In early 2026 I interned in the Corporate Finance Department at Guangdong Nanyue Bank, which showed me how corporate lending and credit approval work behind the scenes. Most recently, at Hainan Yimo Investment, I researched private equity opportunities in brain-computer interfaces, medical devices, and innovative drugs.</p>
+      </div>
+    </section>
+
+    <section class="exp-block">
+      <div class="exp-heading">
+        <h2>Engineering &amp; Project Management</h2>
+        <p class="years">Sep 2024 to present</p>
+      </div>
+      <div class="exp-text">
+        <p>Since September 2024, I've been the United States General Manager and a Project Manager at Zhongjihua Engineering Management Group. I research U.S. construction and real estate practices and look for potential partners, and I've represented the company at World of Concrete, the NAHB International Builders' Show, and the AGC Annual Convention. I also help manage projects like residential developments, public healthcare facilities, and industrial parks, coordinating schedule, cost, and quality between owners, contractors, and supervision teams.</p>
+      </div>
+    </section>
+
+    <section class="exp-block">
+      <div class="exp-heading">
+        <h2>Green Horizon Initiative</h2>
+        <p class="years">Sep 2023 to present</p>
+      </div>
+      <div class="exp-text">
+        <p>In 2023 I founded the Green Horizon Initiative together with Zhongjihua. The goal is to promote eco-friendly construction techniques. We work with government partners on projects, and we try to connect industry professionals, NGOs, and policymakers so they can share ideas about green innovation in construction.</p>
+      </div>
+    </section>
+
+    <!-- D3 visualization -->
+    <section class="chart-section">
+      <h2>My Timeline</h2>
+      <p>Each bar shows how long I was in a role. The dashed line marks today, so any bar that reaches it is something I'm still doing. Hover over (or tap) a bar to see the details.</p>
+      <div id="timeline-legend" class="legend"></div>
+      <div id="timeline" class="chart-wrap"></div>
+    </section>
+
+    <!-- Ordered list -->
+    <section>
+      <h2>All My Roles, in Order</h2>
+      <ol class="role-list">
+        <li><strong>Founder &amp; Project Leader</strong>, Green Horizon Initiative
+          <span class="when">Sep 2023 to present, Beijing</span></li>
+        <li><strong>Intern, Investment Management</strong>, Hongzheng Lide Capital Management
+          <span class="when">May 2024 to Jun 2024, Beijing</span></li>
+        <li><strong>U.S. General Manager &amp; Project Manager</strong>, Zhongjihua Engineering Management Group
+          <span class="when">Sep 2024 to present, hybrid</span></li>
+        <li><strong>Intern, Wealth Management</strong>, China CICC Wealth Management Securities
+          <span class="when">Jul 2025 to Aug 2025, Beijing</span></li>
+        <li><strong>Intern, Corporate Finance</strong>, Guangdong Nanyue Bank, Shenzhen Branch
+          <span class="when">Jan 2026 to Apr 2026, Shenzhen</span></li>
+        <li><strong>Investment Research Intern</strong>, Hainan Yimo Investment
+          <span class="when">Mar 2026 to Sep 2026, Beijing</span></li>
+      </ol>
+    </section>
+
+    <!-- Unordered list -->
+    <section>
+      <h2>Tools I Use</h2>
+      <ul class="skills">
+        <li>Python</li>
+        <li>R</li>
+        <li>SQL</li>
+        <li>Stata</li>
+        <li>Wind</li>
+        <li>Bloomberg</li>
+        <li>Microsoft Office</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Peisong Yuan. Built with HTML, CSS, and D3 for my class.</p>
+  </footer>
+
+  <!-- D3 library, then my chart code -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="js/timeline.js"></script>
+</body>
+</html>

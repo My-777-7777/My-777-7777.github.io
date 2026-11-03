@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" role="img" aria-labelledby="title">
+  <title id="title">Illustration of a building under construction with a crane, next to a rising bar chart</title>
+  <defs>
+    <pattern id="win" width="20" height="22" patternUnits="userSpaceOnUse">
+      <rect x="5" y="6" width="9" height="10" fill="#f4d58d" opacity="0.85"/>
+    </pattern>
+  </defs>
+
+  <!-- background and ground -->
+  <rect width="900" height="380" fill="#eef2f6"/>
+  <rect x="0" y="320" width="900" height="60" fill="#d5dde6"/>
+  <line x1="0" y1="320" x2="900" y2="320" stroke="#1b2a41" stroke-width="3"/>
+
+  <!-- building: finished floors -->
+  <rect x="140" y="215" width="200" height="105" fill="#1b2a41"/>
+  <rect x="146" y="220" width="190" height="98" fill="url(#win)"/>
+
+  <!-- building: steel frame still going up -->
+  <g stroke="#1b2a41" stroke-width="5" stroke-linecap="square" fill="none">
+    <line x1="140" y1="215" x2="140" y2="110"/>
+    <line x1="207" y1="215" x2="207" y2="110"/>
+    <line x1="273" y1="215" x2="273" y2="110"/>
+    <line x1="340" y1="215" x2="340" y2="145"/>
+    <line x1="140" y1="180" x2="340" y2="180"/>
+    <line x1="140" y1="145" x2="340" y2="145"/>
+    <line x1="140" y1="110" x2="273" y2="110"/>
+  </g>
+  <g stroke="#1b2a41" stroke-width="2" fill="none">
+    <line x1="140" y1="180" x2="207" y2="145"/>
+    <line x1="207" y1="180" x2="273" y2="145"/>
+    <line x1="273" y1="180" x2="340" y2="145"/>
+    <line x1="140" y1="145" x2="207" y2="110"/>
+  </g>
+
+  <!-- crane mast -->
+  <g stroke="#c8102e" stroke-width="3" fill="none">
+    <line x1="392" y1="320" x2="392" y2="70"/>
+    <line x1="408" y1="320" x2="408" y2="70"/>
+    <polyline points="392,320 408,300 392,280 408,260 392,240 408,220 392,200 408,180 392,160 408,140 392,120 408,100 392,80"/>
+  </g>
+
+  <!-- crane jib and counter jib -->
+  <g stroke="#c8102e" stroke-width="3" fill="none">
+    <line x1="170" y1="62" x2="470" y2="62"/>
+    <line x1="170" y1="72" x2="470" y2="72"/>
+    <polyline points="170,72 185,62 200,72 215,62 230,72 245,62 260,72 275,62 290,72 305,62 320,72 335,62 350,72 365,62 380,72"/>
+    <line x1="400" y1="32" x2="180" y2="62"/>
+    <line x1="400" y1="32" x2="465" y2="62"/>
+  </g>
+  <polygon points="392,62 408,62 400,32" fill="#c8102e"/>
+  <rect x="440" y="72" width="30" height="24" fill="#1b2a41"/>
+  <rect x="408" y="74" width="20" height="16" fill="#1b2a41"/>
+
+  <!-- trolley, cable, and a steel beam being lifted -->
+  <rect x="232" y="72" width="16" height="8" fill="#1b2a41"/>
+  <line x1="240" y1="80" x2="240" y2="88" stroke="#1b2a41" stroke-width="2"/>
+  <line x1="240" y1="88" x2="215" y2="96" stroke="#1b2a41" stroke-width="2"/>
+  <line x1="240" y1="88" x2="265" y2="96" stroke="#1b2a41" stroke-width="2"/>
+  <rect x="205" y="96" width="70" height="8" fill="#1b2a41"/>
+
+  <!-- bar chart growing out of the ground -->
+  <line x1="560" y1="100" x2="560" y2="320" stroke="#5c6b7e" stroke-width="2"/>
+  <g fill="#1b2a41">
+    <rect x="585" y="270" width="36" height="50"/>
+    <rect x="640" y="240" width="36" height="80"/>
+    <rect x="695" y="210" width="36" height="110"/>
+    <rect x="750" y="165" width="36" height="155"/>
+  </g>
+  <rect x="805" y="115" width="36" height="205" fill="#c8102e"/>
+
+  <!-- trend line -->
+  <polyline points="603,252 658,222 713,192 768,147 823,97" fill="none" stroke="#2e7d5b" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <g fill="#2e7d5b">
+    <circle cx="603" cy="252" r="6"/>
+    <circle cx="658" cy="222" r="6"/>
+    <circle cx="713" cy="192" r="6"/>
+    <circle cx="768" cy="147" r="6"/>
+  </g>
+  <polygon points="838,80 813,90 831,106" fill="#2e7d5b"/>
+</svg>

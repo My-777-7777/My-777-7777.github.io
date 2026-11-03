@@ -1,0 +1,562 @@
+/* =============================================
+   Peisong Yuan - personal website styles
+   ============================================= */
+
+/* ---------- 1. Color scheme ----------
+   Stored as variables so every page uses the same colors.
+   Navy + red are a nod to Northeastern's colors. */
+:root {
+  --ink: #1b2a41;       /* navy: nav bar, headings, text */
+  --red: #c8102e;       /* red: links, buttons, accents */
+  --red-dark: #9e0c24;  /* darker red for hover */
+  --paper: #ffffff;     /* page background */
+  --mist: #eef2f6;      /* light blue-gray for highlighted boxes */
+  --green: #2e7d5b;     /* leadership color in the chart */
+  --gray: #5c6b7e;      /* captions and small text */
+  --line: #d5dde6;      /* thin borders */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* ---------- 2. Typography ---------- */
+h1, h2, h3,
+.logo, .nav-links a, .tagline, .button,
+figcaption, .years, .facts dt, .contact-links,
+.legend, .role-list strong, .role-list .when,
+.skills li, .footer {
+  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Main heading on the Home page (the biggest heading on the site) */
+h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+/* The Experience page title is smaller than the Home page heading */
+.page-title {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+/* short red line under every section heading */
+h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 4px;
+  margin-top: 0.45rem;
+  background: var(--red);
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.8rem;
+}
+
+p {
+  margin: 0 0 1.1rem;
+  max-width: 68ch;   /* keeps lines easy to read */
+}
+
+a {
+  color: var(--red);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--red-dark);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+/* ---------- 3. Navigation bar ---------- */
+.site-header {
+  position: sticky;   /* stays at the top while scrolling */
+  top: 0;
+  z-index: 10;
+  background: var(--ink);
+}
+
+.navbar {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #ffffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #c9d4e2;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+/* highlight the current page and hovered links */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+  border-bottom-color: var(--red);
+}
+
+.logo:focus-visible,
+.nav-links a:focus-visible {
+  outline-color: #ffffff;
+}
+
+/* ---------- 4. Page layout ---------- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+}
+
+section {
+  margin-bottom: 3.5rem;
+}
+
+/* so the sticky nav bar doesn't cover headings when jumping to #contact */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* ----- Home page: heading + image side by side ----- */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-text {
+  flex: 1.1;
+}
+
+.hero-figure {
+  flex: 1;
+  margin: 0;
+}
+
+.hero-figure img,
+.wide-figure img {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--gray);
+  margin-bottom: 1.6rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button {
+  display: inline-block;
+  background: var(--red);
+  color: #ffffff;
+  border: 2px solid var(--red);
+  border-radius: 4px;
+  padding: 0.6rem 1.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.button:hover {
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+  color: #ffffff;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.button-outline:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #ffffff;
+}
+
+/* ----- Home page: about text + quick facts box ----- */
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.facts {
+  background: var(--mist);
+  border-left: 4px solid var(--red);
+  padding: 1.4rem 1.5rem;
+}
+
+.facts dl {
+  margin: 0;
+}
+
+.facts dt {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.facts dd {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.facts dd:last-child {
+  margin-bottom: 0;
+}
+
+/* ----- Contact section ----- */
+.contact {
+  background: var(--ink);
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 2.5rem;
+}
+
+.contact h2 {
+  color: #ffffff;
+}
+
+.contact p {
+  color: #d7dfea;
+}
+
+.contact-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-links a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 2px;
+}
+
+.contact-links a:hover {
+  color: #ffd2d9;
+}
+
+.contact-links a:focus-visible {
+  outline-color: #ffffff;
+}
+
+/* ----- Experience page ----- */
+.page-intro p {
+  font-size: 1.1rem;
+}
+
+.wide-figure {
+  margin: 0 0 3.5rem;
+}
+
+/* heading on the left, text on the right */
+.exp-block {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 0 2.5rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.years {
+  font-size: 0.95rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+/* D3 chart area */
+.chart-section {
+  background: var(--mist);
+  border-radius: 6px;
+  padding: 2rem;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.legend-item i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.chart-wrap {
+  overflow-x: auto;
+}
+
+#timeline svg {
+  display: block;
+}
+
+#timeline text {
+  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  fill: var(--ink);
+}
+
+#timeline .x-axis line {
+  stroke: #c7d2de;
+}
+
+#timeline .x-axis text {
+  font-size: 12px;
+  fill: var(--gray);
+}
+
+#timeline .y-axis text,
+#timeline .bar-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#timeline .today-line {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+
+#timeline .today-label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bar {
+  cursor: pointer;
+}
+
+.bar:hover {
+  opacity: 0.8;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 20;
+  max-width: 250px;
+  pointer-events: none;
+  opacity: 0;
+  background: var(--ink);
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 0.55rem 0.75rem;
+  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  transition: opacity 0.15s;
+}
+
+.tooltip span {
+  color: #c9d4e2;
+}
+
+/* ordered list of roles */
+.role-list {
+  margin: 0;
+  padding-left: 1.6rem;
+}
+
+.role-list li {
+  padding-left: 0.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.role-list li::marker {
+  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.role-list .when {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* unordered list of tools, shown as pills */
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.skills li {
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 0.2rem 0.95rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* ---------- 5. Footer ---------- */
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.footer p {
+  max-width: none;
+  margin: 0;
+}
+
+/* ---------- 6. Smaller screens ---------- */
+@media (max-width: 760px) {
+  body {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding-top: 2rem;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .about-layout,
+  .exp-block {
+    grid-template-columns: 1fr;
+  }
+
+  .about-layout {
+    gap: 2rem;
+  }
+
+  .exp-heading {
+    margin-bottom: 1rem;
+  }
+
+  .contact,
+  .chart-section {
+    padding: 1.5rem;
+  }
+}
+
+/* respect people who turn off animations */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
